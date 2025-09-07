@@ -44,7 +44,7 @@ class SignupPageViewTest(TestCase):
 
     def test_signup_page_view_template_used(self):
         response = self.client.get(reverse('signup'))
-        self.assertTemplateUsed(response, 'registration/signup.html')
+        self.assertTemplateUsed(response, 'account/signup.html')
 
     def test_signup_page_view_content(self):
         response = self.client.get(reverse('signup'))
@@ -57,7 +57,7 @@ class LoginPageViewTest(TestCase):
 
     def test_login_page_view_template_used(self):
         response = self.client.get(reverse('login'))
-        self.assertTemplateUsed(response, 'registration/login.html')
+        self.assertTemplateUsed(response, 'account/login.html')
 
     def test_login_page_view_content(self):
         response = self.client.get(reverse('login'))
